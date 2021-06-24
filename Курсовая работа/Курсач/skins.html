@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skins</title>
+    <style>
+        body{background: #c9bda3;}        /*Css оформление*/
+        .menu{
+            background-color: #ede2cb;   /*цвет фона*/
+            height: 565px;                     /*высота*/
+            width: 700px;                       /*ширина*/
+            display: block;            /*определяет, как элемент должен быть показан в документе Элемент показывается как блочный*/
+            margin: auto;                   /*величину отступа от каждого края элемента auto указывает что размер отступов будет автоматически рассчитан браузером.*/
+            text-align: center;         /*Определяет горизонтальное выравнивание текста в пределах элемента.Выравнивание текста по центру*/
+            padding: 5px;                   /*позволяет задать величину поля сразу для всех сторон элемента*/
+        }
+        .caption{
+            padding: 5px;
+            background-color: #d8c7a4;
+            margin: -5px;
+        }
+        .save{
+            padding:5px; 
+            margin: 20px;
+            background-color: #ddb09d;
+            border-radius: 20px; /*Устанавливает радиус скругления уголков рамки.*/
+        }
+        .save:hover{
+            padding: 5px;
+            margin: 10px;
+            margin-top: 25px;        /*Устанавливает величину отступа от верхнего края элемента*/
+            background-color: #d89a7f;
+        }
+        h3{
+            margin-left: -350px;
+        }
+        
+        #blue{
+            width: 90px;
+            float: left; /*Определяет, по какой стороне будет выравниваться элемент,Выравнивает элемент по левому краю, а все остальные элементы, вроде текста, обтекают его по правой стороне.*/
+            padding: 4px;
+            background-color: #0095dd;
+            margin-left: 30px;
+            cursor: pointer; /*форма курсора*/
+        }
+        #red{
+            width: 90px;
+            float: left;
+            padding: 4px;
+            background-color: #dd0000;
+            margin-left: 30px;
+            cursor: pointer;
+        }
+        #yellow{
+            width: 90px;
+            float: left;
+            padding: 4px;
+            background-color: #d9ff00;
+            margin-left: 30px;
+            cursor: pointer;
+        }
+        #pink{
+            width: 90px;
+            float: left;
+            padding: 4px;
+            background-color:#ffc8d9;
+            margin-left: 30px;
+            cursor: pointer;
+        }
+        #black{
+            width: 90px;
+            float: left;
+            padding: 4px;
+            background-color:#5f5959;
+            margin-left: 30px;
+            cursor: pointer;
+        }
+        #white{
+            width: 90px;
+            float: left;
+            padding: 4px;
+            background-color:#ffffff;
+            margin-left: 30px;
+            cursor: pointer;
+        }
+        #orange{
+            width: 90px;
+            float: left;
+            padding: 4px;
+            background-color:#ffa600;
+            margin-left: 30px;
+            cursor: pointer;
+        }#purple{
+            width: 90px;
+            float: left;
+            padding: 4px;
+            background-color:#b700ff;
+            margin-left: 30px;
+            cursor: pointer;
+        }
+        
+        #lightBlue{
+            width: 90px;
+            float: left;
+            padding: 4px;
+            background-color:#00d9ff;
+            margin-left: 30px;
+            cursor: pointer;
+        }
+        #green{
+            width: 90px;
+            float: left;
+            padding: 4px;
+            background-color:#31f02a;
+            margin-left: 30px;
+            cursor: pointer;
+        }#carrot{
+            width: 32px;
+            height: 32px;
+            float: left;
+            background:url(pics/food/carrot.png);
+            margin-left: 30px;
+            cursor: pointer;
+        }
+        #apple{
+            width: 32px;
+            height: 32px;
+            float: left;
+            background:url(pics/food/apple.png);
+            margin-left: 30px;
+            cursor: pointer;
+        }
+        #earth{
+            width: 32px;
+            height: 32px;
+            float: left;
+            background:url(pics/food/earth.png);
+            margin-left: 30px;
+            cursor: pointer;
+        }
+        #leaf{
+            width: 32px;
+            height: 32px;
+            float: left;
+            background:url(pics/food/Leaf.png);
+            margin-left: 30px;
+            cursor: pointer;
+        }
+        #cabbage{
+            width: 32px;
+            height: 32px;
+            float: left;
+            background:url(pics/food/cabbage.png);
+            margin-left: 30px;
+            cursor: pointer;
+        }
+        #broccoli{
+            width: 32px;
+            height: 32px;
+            float: left;
+            background:url(pics/food/broccoli.png);
+            margin-left: 30px;
+            cursor: pointer;
+        }
+    
+    .colors{
+        margin-top: -30px;
+        margin-left: 250px;
+    }
+    .optcolor{
+        background-color:#e0d3b8;
+    }
+
+    a img                   /* css При наведении на текст, появляется картинка*/
+ {
+     width:250px;
+     height:250px;
+     position:absolute;
+     visibility:hidden;
+ }
+ a:hover >img
+ {
+     visibility:visible;
+ }
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <div class="caption">
+            <h1>skins</h1>
+        </img>
+        </div>
+        <div class="optionworm optcolor">
+            <h3>Цвет хвоста</h3>
+            <div class="colors">
+        <div id="blue" onclick="localStorage.setItem('wormcolor','#0095DD');">Синий</div> 
+        <div id="red" onclick="localStorage.setItem('wormcolor','#dd0000');">Красный</div>
+        <div id="pink" onclick="localStorage.setItem('wormcolor','#ffc8d9');">Розовый</div>
+        <br> <br>
+        <div id="yellow" onclick="localStorage.setItem('wormcolor','yellow');">Жёлтый</div>
+        <div id="black" onclick="localStorage.setItem('wormcolor','black');">Чёрный</div>
+        <div id="orange" onclick="localStorage.setItem('wormcolor','#ffa600');">Оранжевый</div>
+        <br> <br>
+        
+        <div id="lightBlue" onclick="localStorage.setItem('wormcolor','#00d9ff');">Голубой</div>
+        <div id="purple" onclick="localStorage.setItem('wormcolor','#b700ff');">Феолетовый</div>
+            </div>
+            <br>            <br>
+        </div>
+        <div class="optionbg optcolor">
+            <h3>цвет поля</h3>
+            <div class="colors">
+        <div id="white" onclick="localStorage.setItem('bgcolor','pics/playground/playgroundWhite.png');">
+            <a src="#">Белый<img src="pics/playground/playgroundWhite.png"></a>
+        </div>
+        <div id="pink" onclick="localStorage.setItem('bgcolor','pics/playground/playgroundPink.png');">
+            <a src="#">Розовый<img src="pics/playground/playgroundPink.png"></a>
+        </div>
+        <div id="green" onclick="localStorage.setItem('bgcolor','pics/playground/playgroundGreen.png');">
+            <a src="#">Зеленый<img src="pics/playground/playgroundGreen.png"></a>
+        </div>
+        <br> <br>
+        <div id="yellow" onclick="localStorage.setItem('bgcolor','pics/playground/playgroundYellow.png');">
+            <a src="#">Жёлтый<img src="pics/playground/playgroundYellow.png"></a>
+            </div>
+        <div id="red" onclick="localStorage.setItem('bgcolor','pics/playground/playgroundRed.png');">
+            <a src="#">Красный<img src="pics/playground/playgroundRed.png"></a>
+            </div>
+        <div id="orange" onclick="localStorage.setItem('bgcolor','pics/playground/playgroundOrange');"> 
+            <a src="#">Оранжевый<img src="pics/playground/playgroundOrange.png"></a>
+        </div>
+        <br> <br>
+        <div id="blue" onclick="localStorage.setItem('bgcolor','pics/playground/playgroundBlue');">
+            <a src="#">Синий<img src="pics/playground/playgroundBlue.png"></a>
+           </div>
+        <div id="lightBlue" onclick="localStorage.setItem('bgcolor','pics/playground/playgroundLightBlue.png');">
+            <a src="#">Голубой<img src="pics/playground/playgroundLightBlue.png"></a>
+        </div>
+        <div id="purple" onclick="localStorage.setItem('bgcolor','pics/playground/playgroundPurple.png');">
+            <a src="#">Феолетовый<img src="pics/playground/playgroundPurple.png"></a>
+        </div>
+            </div>
+            <br>     <br>            
+        </div>
+        <div class="optionfood optcolor">
+            <h3>выбор еды</h3>
+            <div class="colors">
+        <div id="earth" onclick="localStorage.setItem('foodcolor','pics/food/earth.png');"></div>
+        <div id="apple" onclick="localStorage.setItem('foodcolor','pics/food/apple.png');"></div>
+        <div id="carrot" onclick="localStorage.setItem('foodcolor','pics/food/carrot.png');"></div>
+
+        <div id="broccoli" onclick="localStorage.setItem('foodcolor','pics/food/broccoli.png');"></div>
+        <div id="leaf" onclick="localStorage.setItem('foodcolor','pics/food/leaf.png');"></div>
+        <div id="cabbage" onclick="localStorage.setItem('foodcolor','pics/food/cabbage.png');"></div>
+            </div>
+            <br>            <br>
+            <br>            <br>
+        </div>
+        <div class="optionfood optcolor">
+        <div class="save" onclick="document.location='worm.html'">
+                <h2>Сохранить</h2>
+        </div>
+    </div>
+    <script src="worm1.3.js" type="text/javascript"></script>
+</body>
+</html>
